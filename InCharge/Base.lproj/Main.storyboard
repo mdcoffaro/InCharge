@@ -325,6 +325,13 @@
                                 <animations/>
                                 <state key="normal" title="Get Suggestions"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-Wv-oOZ">
+                                <rect key="frame" x="20" y="410" width="125" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-Aw-hIJ">
                                 <rect key="frame" x="20" y="439" width="280" height="29"/>
                                 <animations/>
@@ -341,19 +348,17 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-xj-3pK">
-                                <rect key="frame" x="118" y="226" width="84" height="21"/>
+                                <rect key="frame" x="190" y="409" width="84" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-Wv-oOZ">
-                                <rect key="frame" x="98" y="197" width="125" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="103" width="320" height="299"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -368,6 +373,7 @@
                     <connections>
                         <outlet property="graphTypeLabel" destination="EqK-Wv-oOZ" id="SYM-2s-cM3"/>
                         <outlet property="graphTypeSegmentedControl" destination="Fga-Aw-hIJ" id="db8-bs-7h2"/>
+                        <outlet property="lineChart" destination="Oyv-bu-tBS" id="eOz-pe-nMS"/>
                         <outlet property="unitTypeLabel" destination="3hh-xj-3pK" id="qhP-f7-kiv"/>
                         <outlet property="unitTypeSegmentedControl" destination="yem-UD-J48" id="cMG-kB-UWk"/>
                         <segue destination="egg-AG-KFe" kind="show" id="e1Q-zL-JdL"/>
