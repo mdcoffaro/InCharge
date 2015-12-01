@@ -291,6 +291,26 @@
             </objects>
             <point key="canvasLocation" x="2869" y="990"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="L1P-ax-IG4">
+            <objects>
+                <viewController id="AyQ-hg-Urd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e1V-Wy-ae5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1dj-MH-tq9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q4L-If-hFj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0b-NR-oLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2741" y="-1524"/>
+        </scene>
         <!--House Overview-->
         <scene sceneID="d4g-0A-vQS">
             <objects>
@@ -368,7 +388,19 @@
                             <constraint firstItem="90a-1v-KNV" firstAttribute="trailing" secondItem="FUb-Yk-MQ9" secondAttribute="trailingMargin" id="AgP-0u-BsX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="House Overview" id="xRL-7D-dgH"/>
+                    <navigationItem key="navigationItem" title="House Overview" id="xRL-7D-dgH">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="83B-lt-It9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JNQ-ep-QIc">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="AyQ-hg-Urd" kind="presentation" id="chu-Ls-bTj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="graphTypeLabel" destination="EqK-Wv-oOZ" id="SYM-2s-cM3"/>

@@ -21,7 +21,9 @@ class OverviewViewController: UIViewController {
     @IBOutlet weak var lineChart: LineChartView!
     
     
+    let weeks = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"]
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+    
     let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
 
     
@@ -49,16 +51,16 @@ class OverviewViewController: UIViewController {
         }
     }
     
+    //Function to handle switching between units of measurement between graphs
+    //Currently using hard coded arrays of data
     @IBAction func unitIndexChanged(sender: UISegmentedControl) {
         switch unitTypeSegmentedControl.selectedSegmentIndex{
             case 0:
                 setChartDay(months, values: unitsSold)
             case 1:
-                unitTypeLabel.text = "Week"
-                lineChart.noDataText = "WEEKS BRUH"
+                setChartWeek(weeks, values: unitsSold)
             case 2:
-            unitTypeLabel.text = "Month"
-            lineChart.noDataText = "MONTHS BRUH"
+                setChartMonth(weeks, values: unitsSold)
             case 3:
                 unitTypeLabel.text = "Year"
                 lineChart.noDataText = "YEARS BRUH"
@@ -80,5 +82,48 @@ class OverviewViewController: UIViewController {
         let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
         lineChart.data = lineChartData
     }
+    
+    func setChartWeek(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        lineChart.data = lineChartData
+    }
+    
+    func setChartMonth(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        lineChart.data = lineChartData
+    }
+    
+    func setChartYear(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        lineChart.data = lineChartData
+    }
+
     
 }
