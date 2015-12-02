@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */; };
 		1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */; };
+		EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */; };
 		EB96112F1BFDD8C20009CBCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB96112A1BFDD8B20009CBCE /* Charts.framework */; };
 		EB9611301BFDD8C20009CBCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB96112A1BFDD8B20009CBCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96F4651BF9C00700127FF0 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
 		EB9611231BFDD8B20009CBCE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/ios-charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EB96F4601BF9C00700127FF0 /* InCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96F4641BF9C00700127FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				EBE298C81BFE98BC001A6629 /* BillViewController.swift */,
 				1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */,
 				EB96F46B1BF9C00700127FF0 /* Main.storyboard */,
+				EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */,
 				EB96F46E1BF9C00700127FF0 /* Images.xcassets */,
 				EB96F4701BF9C00700127FF0 /* LaunchScreen.xib */,
 				EB96F4631BF9C00700127FF0 /* Supporting Files */,
@@ -317,6 +320,7 @@
 			files = (
 				EB96F46A1BF9C00700127FF0 /* SecondViewController.swift in Sources */,
 				1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */,
+				EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */,
 				EBE298C91BFE98BC001A6629 /* BillViewController.swift in Sources */,
 				1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */,
 				EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */,

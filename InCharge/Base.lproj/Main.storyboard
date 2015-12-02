@@ -418,7 +418,7 @@
         <!--Compare-->
         <scene sceneID="UTN-iP-v6b">
             <objects>
-                <viewController id="piJ-oZ-kMl" sceneMemberID="viewController">
+                <viewController id="piJ-oZ-kMl" customClass="CompareViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fgC-Aj-n3i"/>
                         <viewControllerLayoutGuide type="bottom" id="6Wl-ge-Ldh"/>
@@ -426,13 +426,39 @@
                     <view key="view" contentMode="scaleToFill" id="spr-Eg-sIt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jo-pp-Udm">
+                                <rect key="frame" x="0.0" y="399" width="161" height="112"/>
+                                <animations/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kC5-pc-v9K">
+                                <rect key="frame" x="159" y="399" width="161" height="112"/>
+                                <animations/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-7D-G5e" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="320" height="322"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Compare" id="drj-Lk-2Gy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="leftItemSelector" destination="5Jo-pp-Udm" id="0cn-te-fWL"/>
+                        <outlet property="lineChart" destination="8vg-7D-G5e" id="QTo-Iz-Q3W"/>
+                        <outlet property="rightItemSelector" destination="kC5-pc-v9K" id="OsL-F0-k3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmT-3X-0IY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zUq-cQ-cvP" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1819" y="12"/>
         </scene>
