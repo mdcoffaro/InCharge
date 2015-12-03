@@ -10,6 +10,12 @@
 		1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */; };
 		1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */; };
 		EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */; };
+		EB6F2EB61C104F8F00EC9467 /* bill2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB31C104F8F00EC9467 /* bill2x.png */; };
+		EB6F2EB71C104F8F00EC9467 /* compare2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB41C104F8F00EC9467 /* compare2x.png */; };
+		EB6F2EB81C104F8F00EC9467 /* graph2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB51C104F8F00EC9467 /* graph2x.png */; };
+		EB6F2EBC1C10506100EC9467 /* billFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB91C10506100EC9467 /* billFinal.png */; };
+		EB6F2EBD1C10506100EC9467 /* compareFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EBA1C10506100EC9467 /* compareFinal.png */; };
+		EB6F2EBE1C10506100EC9467 /* overviewFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EBB1C10506100EC9467 /* overviewFinal.png */; };
 		EB96112F1BFDD8C20009CBCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB96112A1BFDD8B20009CBCE /* Charts.framework */; };
 		EB9611301BFDD8C20009CBCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB96112A1BFDD8B20009CBCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96F4651BF9C00700127FF0 /* AppDelegate.swift */; };
@@ -78,6 +84,12 @@
 		1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
+		EB6F2EB31C104F8F00EC9467 /* bill2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill2x.png; sourceTree = "<group>"; };
+		EB6F2EB41C104F8F00EC9467 /* compare2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compare2x.png; sourceTree = "<group>"; };
+		EB6F2EB51C104F8F00EC9467 /* graph2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph2x.png; sourceTree = "<group>"; };
+		EB6F2EB91C10506100EC9467 /* billFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billFinal.png; sourceTree = "<group>"; };
+		EB6F2EBA1C10506100EC9467 /* compareFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compareFinal.png; sourceTree = "<group>"; };
+		EB6F2EBB1C10506100EC9467 /* overviewFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overviewFinal.png; sourceTree = "<group>"; };
 		EB9611231BFDD8B20009CBCE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/ios-charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		EB96F4601BF9C00700127FF0 /* InCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96F4641BF9C00700127FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +174,12 @@
 		EB96F4631BF9C00700127FF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB6F2EB31C104F8F00EC9467 /* bill2x.png */,
+				EB6F2EB41C104F8F00EC9467 /* compare2x.png */,
+				EB6F2EB51C104F8F00EC9467 /* graph2x.png */,
+				EB6F2EB91C10506100EC9467 /* billFinal.png */,
+				EB6F2EBA1C10506100EC9467 /* compareFinal.png */,
+				EB6F2EBB1C10506100EC9467 /* overviewFinal.png */,
 				EB96F4641BF9C00700127FF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -300,6 +318,12 @@
 			files = (
 				EB96F46D1BF9C00700127FF0 /* Main.storyboard in Resources */,
 				EB96F4721BF9C00700127FF0 /* LaunchScreen.xib in Resources */,
+				EB6F2EBE1C10506100EC9467 /* overviewFinal.png in Resources */,
+				EB6F2EBC1C10506100EC9467 /* billFinal.png in Resources */,
+				EB6F2EB61C104F8F00EC9467 /* bill2x.png in Resources */,
+				EB6F2EBD1C10506100EC9467 /* compareFinal.png in Resources */,
+				EB6F2EB71C104F8F00EC9467 /* compare2x.png in Resources */,
+				EB6F2EB81C104F8F00EC9467 /* graph2x.png in Resources */,
 				EB96F46F1BF9C00700127FF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

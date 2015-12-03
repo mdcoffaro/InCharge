@@ -345,13 +345,16 @@
                                 <animations/>
                                 <state key="normal" title="Get Suggestions"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-Wv-oOZ">
-                                <rect key="frame" x="20" y="410" width="125" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="135" width="320" height="299"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-Aw-hIJ">
                                 <rect key="frame" x="20" y="439" width="280" height="29"/>
                                 <animations/>
@@ -367,18 +370,6 @@
                                     <action selector="indexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="RaI-VR-Pft"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-xj-3pK">
-                                <rect key="frame" x="190" y="409" width="84" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="103" width="320" height="299"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -396,19 +387,17 @@
                                 <animations/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
-                                    <segue destination="AyQ-hg-Urd" kind="presentation" id="chu-Ls-bTj"/>
+                                    <segue destination="AyQ-hg-Urd" kind="show" id="m2C-Ch-oEo"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="graphTypeLabel" destination="EqK-Wv-oOZ" id="SYM-2s-cM3"/>
+                        <outlet property="barChart" destination="Kin-d3-8PP" id="Led-N3-JG6"/>
                         <outlet property="graphTypeSegmentedControl" destination="Fga-Aw-hIJ" id="db8-bs-7h2"/>
                         <outlet property="lineChart" destination="Oyv-bu-tBS" id="eOz-pe-nMS"/>
-                        <outlet property="unitTypeLabel" destination="3hh-xj-3pK" id="qhP-f7-kiv"/>
                         <outlet property="unitTypeSegmentedControl" destination="yem-UD-J48" id="cMG-kB-UWk"/>
-                        <segue destination="egg-AG-KFe" kind="show" id="e1Q-zL-JdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lz-h2-amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -486,7 +475,7 @@
         <scene sceneID="f8o-hk-gmk">
             <objects>
                 <navigationController id="5Tx-G6-MNr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Overview" image="first" id="EGh-ZH-QNg"/>
+                    <tabBarItem key="tabBarItem" title="Overview" image="first" selectedImage="first" id="EGh-ZH-QNg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tDL-Nw-2tK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -505,7 +494,7 @@
         <scene sceneID="9zc-FE-F3a">
             <objects>
                 <navigationController id="rOi-R8-eLN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Energy Bill" id="wlU-1z-cmA"/>
+                    <tabBarItem key="tabBarItem" title="Energy Bill" selectedImage="second" id="wlU-1z-cmA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5M-eo-KOk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -524,7 +513,7 @@
         <scene sceneID="6nt-bQ-Jwe">
             <objects>
                 <navigationController id="wAk-w7-YZq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compare" image="second" id="p1A-Ls-cKn"/>
+                    <tabBarItem key="tabBarItem" title="Compare" image="second" selectedImage="second" id="p1A-Ls-cKn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVV-6G-fzL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

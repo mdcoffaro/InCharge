@@ -13,13 +13,9 @@ class OverviewViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var graphTypeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var graphTypeLabel: UILabel!
-    
-    @IBOutlet weak var unitTypeLabel: UILabel!
     @IBOutlet weak var unitTypeSegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var lineChart: LineChartView!
-    
+    @IBOutlet weak var barChart: BarChartView!
     
     let hours = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"]
     let days = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
@@ -30,13 +26,17 @@ class OverviewViewController: UIViewController {
     let unitsUsedDays = [20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 12.0]
     let unitsUsedMonths = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
     let unitsUsedYears = [20.0, 4.0, 6.0, 3.0]
+    
+    var firstClickBarChart = true
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         lineChart.noDataText = "Looks like we don't have data for this month yet!"
-        setChartHours(hours, values: unitsUsedHours)
+        barChart.noDataText = "Looks like we don't have data for this month yet!"
+        setChartHours(hours, values: unitsUsedHours, graphType: "Line")
+        barChart.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,9 +49,35 @@ class OverviewViewController: UIViewController {
     @IBAction func indexChanged(sender: UISegmentedControl) {
         switch graphTypeSegmentedControl.selectedSegmentIndex{
             case 0:
-                graphTypeLabel.text = "Line Graph"
+                lineChart.hidden = false
+                barChart.hidden = true
+                switch unitTypeSegmentedControl.selectedSegmentIndex{
+                    case 0:
+                        setChartHours(hours, values: unitsUsedHours, graphType: "Line")
+                    case 1:
+                        setChartDays(days, values: unitsUsedDays, graphType: "Line")
+                    case 2:
+                        setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
+                    case 3:
+                        setChartYears(years, values: unitsUsedYears, graphType: "Line")
+                    default:
+                        break;
+                }
             case 1:
-                graphTypeLabel.text = "Bar Graph"
+                barChart.hidden = false
+                lineChart.hidden = true
+                switch unitTypeSegmentedControl.selectedSegmentIndex{
+                    case 0:
+                        setChartHours(hours, values: unitsUsedHours, graphType: "Bar")
+                    case 1:
+                        setChartDays(days, values: unitsUsedDays, graphType: "Bar")
+                    case 2:
+                        setChartMonths(months, values: unitsUsedMonths, graphType: "Bar")
+                    case 3:
+                        setChartYears(years, values: unitsUsedYears, graphType: "Bar")
+                    default:
+                        break;
+                }
             default:
                 break;
         }
@@ -62,73 +88,128 @@ class OverviewViewController: UIViewController {
     @IBAction func unitIndexChanged(sender: UISegmentedControl) {
         switch unitTypeSegmentedControl.selectedSegmentIndex{
             case 0:
-                setChartHours(hours, values: unitsUsedHours)
+                if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
+                    setChartHours(hours, values: unitsUsedHours, graphType: "Line")
+                }else{
+                    setChartHours(hours, values: unitsUsedHours, graphType: "Bar")
+                }
             case 1:
-                setChartDays(days, values: unitsUsedDays)
+                if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
+                    setChartDays(days, values: unitsUsedDays, graphType: "Line")
+                }else{
+                    setChartDays(days, values: unitsUsedDays, graphType: "Bar")
+                }
             case 2:
-                setChartMonths(months, values: unitsUsedMonths)
+                if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
+                    setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
+                }else{
+                    setChartMonths(months, values: unitsUsedMonths, graphType: "Bar")
+                }
             case 3:
-                setChartYears(years, values: unitsUsedYears)
+                if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
+                    setChartYears(years, values: unitsUsedYears, graphType: "Line")
+                }else{
+                    setChartYears(years, values: unitsUsedYears, graphType: "Bar")
+                }
             default:
                 break;
         }
     }
     
-    func setChartHours(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
-        }
-
+    func setChartHours(dataPoints: [String], values: [Double], graphType: String) {
+        if(graphType == "Bar"){
+            var dataEntries: [BarChartDataEntry] = []
             
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-        lineChart.data = lineChartData
+            for i in 0..<dataPoints.count {
+                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
+            barChart.data = barChartData
+        }else{
+            var dataEntries: [ChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+            lineChart.data = lineChartData
+        }
     }
     
-    func setChartDays(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
+    func setChartDays(dataPoints: [String], values: [Double], graphType: String) {
+        if(graphType == "Bar"){
+            var dataEntries: [BarChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
+            barChart.data = barChartData
+        }else{
+            var dataEntries: [ChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+            lineChart.data = lineChartData
         }
-        
-        
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-        lineChart.data = lineChartData
     }
     
-    func setChartMonths(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
+    func setChartMonths(dataPoints: [String], values: [Double], graphType: String) {
+        if(graphType == "Bar"){
+            var dataEntries: [BarChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
+            barChart.data = barChartData
+        }else{
+            var dataEntries: [ChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+            lineChart.data = lineChartData
         }
-        
-        
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-        lineChart.data = lineChartData
     }
     
-    func setChartYears(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
+    func setChartYears(dataPoints: [String], values: [Double], graphType: String) {
+        if(graphType == "Bar"){
+            var dataEntries: [BarChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
+            barChart.data = barChartData
+        }else{
+            var dataEntries: [ChartDataEntry] = []
+            
+            for i in 0..<dataPoints.count {
+                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                dataEntries.append(dataEntry)
+            }
+            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
+            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+            lineChart.data = lineChartData
         }
-        
-        
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-        lineChart.data = lineChartData
     }
 
-    
 }
