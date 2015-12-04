@@ -12,6 +12,7 @@ import Charts
 class CompareGraphViewController: UIViewController {
     
     var passer: selectedItems?
+    var chosenFoos: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,16 @@ class CompareGraphViewController: UIViewController {
         house.loadRooms()
 
         // Do any additional setup after loading the view.
-        lineChart.noDataText = "Looks like we don't have data for this month yet!"
+        lineChart.noDataText = "Looks like we don't have data yet!"
+        
+        if (passer!.showPeople){
+            chosenFoos = passer!.selectedPeople
+        } else {
+            chosenFoos = passer!.selectedRooms
+        }
+        
 
-        setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: passer!.selectedPeople)
+        setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: chosenFoos)
 
     }
 
@@ -57,13 +65,13 @@ class CompareGraphViewController: UIViewController {
     @IBAction func unitIndexChanged(sender: UISegmentedControl) {
         switch unitTypeSegmentedControl.selectedSegmentIndex{
         case 0:
-            setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: passer!.selectedPeople)
+            setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: chosenFoos)
         case 1:
-            setChartDays(days, values: unitsUsedDays, graphType: "Line")
+            setChartDays(days, values: unitsUsedDays, graphType: "Line", itemsToRender: chosenFoos)
         case 2:
-            setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
+            setChartMonths(months, values: unitsUsedMonths, graphType: "Line", itemsToRender: chosenFoos)
         case 3:
-            setChartYears(years, values: unitsUsedYears, graphType: "Line")
+            setChartYears(years, values: unitsUsedYears, graphType: "Line", itemsToRender: chosenFoos)
         default:
             break;
         }
@@ -72,61 +80,155 @@ class CompareGraphViewController: UIViewController {
        
     func setChartHours(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
 
-            var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
-            var dataEntries: [ChartDataEntry] = []
-            let dataPoints = hours
-            for(val) in itemsToRender{
-                print(val)
+        var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
+        var dataEntries: [ChartDataEntry] = []
+        let dataPoints = hours
+        for(val) in itemsToRender{
+            print(val)
+            if (passer!.showPeople){
                 let values = house.people[val]!.hours
                 for i in 0..<dataPoints.count {
                     let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
                     dataEntries.append(dataEntry)
                 }
-                let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used " + val)
-                allLineChartDataSets.append(lineChartDataSet1)
+            } else {
+                let values = house.rooms[val]!.hours
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+                
             }
-            let allDataPoints: [String] = hours
-            let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
-            lineChart.data = lineChartData
+            let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: val)
+            
+            //replace UIColor.redColor() with val.color
+            if(passer!.showPeople){
+                lineChartDataSet1.setColor(house.people[val]!.color)
+                lineChartDataSet1.setCircleColor(house.people[val]!.color)
+            }else{
+                lineChartDataSet1.setColor(house.rooms[val]!.color)
+                lineChartDataSet1.setCircleColor(house.rooms[val]!.color)
+            }
+            allLineChartDataSets.append(lineChartDataSet1)
+        }
+        let allDataPoints: [String] = hours
+        let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
+        lineChart.data = lineChartData
 
     }
     
-    func setChartDays(dataPoints: [String], values: [Double], graphType: String) {
-
-            var dataEntries: [ChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
+    func setChartDays(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
+        
+        var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
+        var dataEntries: [ChartDataEntry] = []
+        let dataPoints = days
+        for(val) in itemsToRender{
+            print(val)
+            if (passer!.showPeople){
+                let values = house.people[val]!.days
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+            } else {
+                let values = house.rooms[val]!.days
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+                
             }
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
+            let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: val)
+            
+            //replace UIColor.redColor() with val.color
+            if(passer!.showPeople){
+                lineChartDataSet1.setColor(house.people[val]!.color)
+                lineChartDataSet1.setCircleColor(house.people[val]!.color)
+            }else{
+                lineChartDataSet1.setColor(house.rooms[val]!.color)
+                lineChartDataSet1.setCircleColor(house.rooms[val]!.color)
+            }
+            allLineChartDataSets.append(lineChartDataSet1)
+        }
+        let allDataPoints: [String] = days
+        let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
+        lineChart.data = lineChartData
     }
     
-    func setChartMonths(dataPoints: [String], values: [Double], graphType: String) {
-
-            var dataEntries: [ChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
+    func setChartMonths(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
+        
+        var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
+        var dataEntries: [ChartDataEntry] = []
+        let dataPoints = months
+        for(val) in itemsToRender{
+            print(val)
+            if (passer!.showPeople){
+                let values = house.people[val]!.months
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+            } else {
+                let values = house.rooms[val]!.months
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+                
             }
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
+            let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: val)
+            
+            //replace UIColor.redColor() with val.color
+            if(passer!.showPeople){
+                lineChartDataSet1.setColor(house.people[val]!.color)
+                lineChartDataSet1.setCircleColor(house.people[val]!.color)
+            }else{
+                lineChartDataSet1.setColor(house.rooms[val]!.color)
+                lineChartDataSet1.setCircleColor(house.rooms[val]!.color)
+            }
+            allLineChartDataSets.append(lineChartDataSet1)
+        }
+        let allDataPoints: [String] = months
+        let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
+        lineChart.data = lineChartData
+
     }
     
-    func setChartYears(dataPoints: [String], values: [Double], graphType: String) {
-
-            var dataEntries: [ChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
+    func setChartYears(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
+        
+        var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
+        var dataEntries: [ChartDataEntry] = []
+        let dataPoints = years
+        for(val) in itemsToRender{
+            print(val)
+            if (passer!.showPeople){
+                let values = house.people[val]!.years
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+            } else {
+                let values = house.rooms[val]!.years
+                for i in 0..<dataPoints.count {
+                    let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+                    dataEntries.append(dataEntry)
+                }
+                
             }
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
+            let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: val)
+            
+            //replace UIColor.redColor() with val.color
+            if(passer!.showPeople){
+                lineChartDataSet1.setColor(house.people[val]!.color)
+                lineChartDataSet1.setCircleColor(house.people[val]!.color)
+            }else{
+                lineChartDataSet1.setColor(house.rooms[val]!.color)
+                lineChartDataSet1.setCircleColor(house.rooms[val]!.color)
+            }
+            allLineChartDataSets.append(lineChartDataSet1)
+        }
+        let allDataPoints: [String] = years
+        let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
+        lineChart.data = lineChartData
     }
 }

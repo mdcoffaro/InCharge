@@ -79,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rhw-41-aqY" id="yX7-ce-nui">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-CT-Ylo">
@@ -391,13 +391,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-lL-chL" userLabel="Garage">
-                                        <rect key="frame" x="8" y="128" width="56" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Master Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-X6-nXv" userLabel="Master Bedroom">
                                         <rect key="frame" x="8" y="165" width="128" height="21"/>
                                         <animations/>
@@ -447,13 +440,6 @@
                                             <action selector="kSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="7C9-5N-kFa"/>
                                         </connections>
                                     </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvV-66-iW9">
-                                        <rect key="frame" x="207" y="123" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="gSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Tg8-ek-nWs"/>
-                                        </connections>
-                                    </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Rn-ldy">
                                         <rect key="frame" x="207" y="160" width="51" height="31"/>
                                         <animations/>
@@ -500,7 +486,6 @@
                         <outlet property="compareTypeSelector" destination="lGe-PO-rGW" id="5Ab-yF-l61"/>
                         <outlet property="dadSwitch" destination="odd-s3-7HB" id="rZR-K4-qp1"/>
                         <outlet property="drSwitch" destination="yuK-lj-poT" id="vC5-m4-ciT"/>
-                        <outlet property="gSwitch" destination="hvV-66-iW9" id="OvO-GM-Su3"/>
                         <outlet property="johnSwitch" destination="cWH-AI-BXg" id="m3c-uu-eCc"/>
                         <outlet property="jrSwitch" destination="guD-ZY-KSW" id="UeI-r4-aqk"/>
                         <outlet property="kSwitch" destination="eoH-J7-BPc" id="t8S-8F-qNM"/>

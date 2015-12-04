@@ -30,7 +30,6 @@ class CompareViewController: UIViewController {
     @IBOutlet weak var kSwitch: UISwitch!
     @IBOutlet weak var lrSwitch: UISwitch!
     @IBOutlet weak var drSwitch: UISwitch!
-    @IBOutlet weak var gSwitch: UISwitch!
     @IBOutlet weak var mbSwitch: UISwitch!
     @IBOutlet weak var jrSwitch: UISwitch!
     @IBOutlet weak var larSwitch: UISwitch!
@@ -53,7 +52,6 @@ class CompareViewController: UIViewController {
         selectedRooms["Kitchen"] = true
         selectedRooms["Living Room"] = true
         selectedRooms["Dining Room"] = true
-        selectedRooms["Garage"] = true
         selectedRooms["Master Bedroom"] = true
         selectedRooms["John's Room"] = true
         selectedRooms["Lauren's Room"] = true
@@ -129,15 +127,7 @@ class CompareViewController: UIViewController {
             selectedRooms["Dining Room"] = false
         }
     }
-    
-    @IBAction func gSelected(sender: UISwitch) {
-        if (gSwitch.on){
-            selectedRooms["Garage"] = true
-        } else {
-            selectedRooms["Garage"] = false
-        }
-    }
-    
+        
     @IBAction func mbSelected(sender: UISwitch) {
         if (mbSwitch.on){
             selectedRooms["Master Bedroom"] = true
@@ -163,18 +153,18 @@ class CompareViewController: UIViewController {
     }
     
     @IBAction func compareSelected(sender: UIButton) {
-//        print("--------------------------------")
-//        print("Selected people")
-//        for (key,val) in selectedPeople {
-//            print("\(key) \t \(val)")
-//        }
-//        print("")
-//        
-//        print("Selected people")
-//        for (key,val) in selectedRooms {
-//            print("\(key) \t \(val)")
-//        }
-//        print("--------------------------------")
+        print("--------------------------------")
+        print("Selected people")
+        for (key,val) in selectedPeople {
+            print("\(key) \t \(val)")
+        }
+        print("")
+        
+        print("Selected people")
+        for (key,val) in selectedRooms {
+            print("\(key) \t \(val)")
+        }
+        print("--------------------------------")
         
 //        let passer = selectedItems()
         if (compareTypeSelector.selectedSegmentIndex == 0){
@@ -199,6 +189,7 @@ class CompareViewController: UIViewController {
         let compareDetailViewController = segue.destinationViewController as! CompareGraphViewController
         
         compareDetailViewController.passer = passer
+        passer = selectedItems()
     }
 }
 
