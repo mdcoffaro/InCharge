@@ -79,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rhw-41-aqY" id="yX7-ce-nui">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-CT-Ylo">
@@ -224,11 +224,6 @@
                                     <action selector="unitIndexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="qRx-lm-Y55"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90a-1v-KNV">
-                                <rect key="frame" x="190" y="72" width="114" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Get Suggestions"/>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="135" width="320" height="299"/>
                                 <subviews>
@@ -262,22 +257,9 @@
                         <constraints>
                             <constraint firstItem="Fga-Aw-hIJ" firstAttribute="centerX" secondItem="FUb-Yk-MQ9" secondAttribute="centerX" id="35Y-4B-W4a"/>
                             <constraint firstItem="yem-UD-J48" firstAttribute="centerX" secondItem="FUb-Yk-MQ9" secondAttribute="centerX" id="6wJ-qD-bih"/>
-                            <constraint firstItem="90a-1v-KNV" firstAttribute="trailing" secondItem="FUb-Yk-MQ9" secondAttribute="trailingMargin" id="AgP-0u-BsX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="House Overview" id="xRL-7D-dgH">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="83B-lt-It9">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JNQ-ep-QIc">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="AyQ-hg-Urd" kind="show" id="m2C-Ch-oEo"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="House Overview" id="xRL-7D-dgH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="barChart" destination="Kin-d3-8PP" id="Led-N3-JG6"/>
