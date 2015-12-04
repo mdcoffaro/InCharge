@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0439339D1C1195DC0006B5F8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043933981C1195CF0006B5F8 /* Charts.framework */; };
-		0439339E1C1195DC0006B5F8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043933981C1195CF0006B5F8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		043933A21C1195F50006B5F8 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043933A11C1195F50006B5F8 /* House.swift */; };
+		1D3E7B721C103702008A155A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3E7B6D1C10358C008A155A /* Charts.framework */; };
+		1D3E7B731C103702008A155A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3E7B6D1C10358C008A155A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D3E7B771C105865008A155A /* EnergyBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7B761C105865008A155A /* EnergyBill.swift */; };
+		1D3E7B7B1C10C922008A155A /* EnergyBillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7B7A1C10C922008A155A /* EnergyBillTableViewController.swift */; };
+		1D3E7B7F1C10CE63008A155A /* EnergyBillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7B7E1C10CE63008A155A /* EnergyBillTableViewCell.swift */; };
+		1D3E7B811C117E06008A155A /* EnergyBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7B801C117E06008A155A /* EnergyBillViewController.swift */; };
 		1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */; };
 		1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */; };
 		EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */; };
-		EB6F2EB61C104F8F00EC9467 /* bill2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB31C104F8F00EC9467 /* bill2x.png */; };
-		EB6F2EB71C104F8F00EC9467 /* compare2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB41C104F8F00EC9467 /* compare2x.png */; };
-		EB6F2EB81C104F8F00EC9467 /* graph2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB51C104F8F00EC9467 /* graph2x.png */; };
-		EB6F2EBC1C10506100EC9467 /* billFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EB91C10506100EC9467 /* billFinal.png */; };
-		EB6F2EBD1C10506100EC9467 /* compareFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EBA1C10506100EC9467 /* compareFinal.png */; };
-		EB6F2EBE1C10506100EC9467 /* overviewFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6F2EBB1C10506100EC9467 /* overviewFinal.png */; };
 		EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96F4651BF9C00700127FF0 /* AppDelegate.swift */; };
 		EB96F4681BF9C00700127FF0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96F4671BF9C00700127FF0 /* FirstViewController.swift */; };
 		EB96F46A1BF9C00700127FF0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96F4691BF9C00700127FF0 /* SecondViewController.swift */; };
@@ -30,30 +27,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		043933971C1195CF0006B5F8 /* PBXContainerItemProxy */ = {
+		1D3E7B6C1C10358C008A155A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 043933911C1195CE0006B5F8 /* Charts.xcodeproj */;
+			containerPortal = 1D3E7B661C10358B008A155A /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
 		};
-		043933991C1195CF0006B5F8 /* PBXContainerItemProxy */ = {
+		1D3E7B6E1C10358C008A155A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 043933911C1195CE0006B5F8 /* Charts.xcodeproj */;
+			containerPortal = 1D3E7B661C10358B008A155A /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
 			remoteInfo = "Charts-TV";
 		};
-		0439339B1C1195CF0006B5F8 /* PBXContainerItemProxy */ = {
+		1D3E7B701C10358C008A155A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 043933911C1195CE0006B5F8 /* Charts.xcodeproj */;
+			containerPortal = 1D3E7B661C10358B008A155A /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
 			remoteInfo = ChartsTests;
 		};
-		0439339F1C1195DC0006B5F8 /* PBXContainerItemProxy */ = {
+		1D3E7B741C103702008A155A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 043933911C1195CE0006B5F8 /* Charts.xcodeproj */;
+			containerPortal = 1D3E7B661C10358B008A155A /* Charts.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
@@ -74,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0439339E1C1195DC0006B5F8 /* Charts.framework in Embed Frameworks */,
+				1D3E7B731C103702008A155A /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,17 +79,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		043933911C1195CE0006B5F8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
-		043933A11C1195F50006B5F8 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = House.swift; path = ../House.swift; sourceTree = "<group>"; };
+		1D3E7B661C10358B008A155A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		1D3E7B761C105865008A155A /* EnergyBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBill.swift; sourceTree = "<group>"; };
+		1D3E7B7A1C10C922008A155A /* EnergyBillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBillTableViewController.swift; sourceTree = "<group>"; };
+		1D3E7B7E1C10CE63008A155A /* EnergyBillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBillTableViewCell.swift; sourceTree = "<group>"; };
+		1D3E7B801C117E06008A155A /* EnergyBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBillViewController.swift; sourceTree = "<group>"; };
 		1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
-		EB6F2EB31C104F8F00EC9467 /* bill2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill2x.png; sourceTree = "<group>"; };
-		EB6F2EB41C104F8F00EC9467 /* compare2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compare2x.png; sourceTree = "<group>"; };
-		EB6F2EB51C104F8F00EC9467 /* graph2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph2x.png; sourceTree = "<group>"; };
-		EB6F2EB91C10506100EC9467 /* billFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billFinal.png; sourceTree = "<group>"; };
-		EB6F2EBA1C10506100EC9467 /* compareFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compareFinal.png; sourceTree = "<group>"; };
-		EB6F2EBB1C10506100EC9467 /* overviewFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overviewFinal.png; sourceTree = "<group>"; };
 		EB96F4601BF9C00700127FF0 /* InCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB96F4641BF9C00700127FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB96F4651BF9C00700127FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0439339D1C1195DC0006B5F8 /* Charts.framework in Frameworks */,
+				1D3E7B721C103702008A155A /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +120,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043933921C1195CE0006B5F8 /* Products */ = {
+		1D3E7B671C10358B008A155A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				043933981C1195CF0006B5F8 /* Charts.framework */,
-				0439339A1C1195CF0006B5F8 /* Charts.framework */,
-				0439339C1C1195CF0006B5F8 /* ChartsTests.xctest */,
+				1D3E7B6D1C10358C008A155A /* Charts.framework */,
+				1D3E7B6F1C10358C008A155A /* Charts.framework */,
+				1D3E7B711C10358C008A155A /* ChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,7 +136,7 @@
 				EB96F4621BF9C00700127FF0 /* InCharge */,
 				EB96F47A1BF9C00700127FF0 /* InChargeTests */,
 				EB96F4611BF9C00700127FF0 /* Products */,
-				043933911C1195CE0006B5F8 /* Charts.xcodeproj */,
+				1D3E7B661C10358B008A155A /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,11 +159,15 @@
 				EBE298C81BFE98BC001A6629 /* BillViewController.swift */,
 				1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */,
 				EB96F46B1BF9C00700127FF0 /* Main.storyboard */,
+				1D3E7B801C117E06008A155A /* EnergyBillViewController.swift */,
+				1D3E7B7A1C10C922008A155A /* EnergyBillTableViewController.swift */,
+				1D3E7B761C105865008A155A /* EnergyBill.swift */,
 				EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */,
 				EB96F46E1BF9C00700127FF0 /* Images.xcassets */,
 				EB96F4701BF9C00700127FF0 /* LaunchScreen.xib */,
 				EB96F4631BF9C00700127FF0 /* Supporting Files */,
 				1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */,
+				1D3E7B7E1C10CE63008A155A /* EnergyBillTableViewCell.swift */,
 			);
 			path = InCharge;
 			sourceTree = "<group>";
@@ -220,7 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				043933A01C1195DC0006B5F8 /* PBXTargetDependency */,
+				1D3E7B751C103702008A155A /* PBXTargetDependency */,
 			);
 			name = InCharge;
 			productName = InCharge;
@@ -278,8 +276,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 043933921C1195CE0006B5F8 /* Products */;
-					ProjectRef = 043933911C1195CE0006B5F8 /* Charts.xcodeproj */;
+					ProductGroup = 1D3E7B671C10358B008A155A /* Products */;
+					ProjectRef = 1D3E7B661C10358B008A155A /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -291,25 +289,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		043933981C1195CF0006B5F8 /* Charts.framework */ = {
+		1D3E7B6D1C10358C008A155A /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 043933971C1195CF0006B5F8 /* PBXContainerItemProxy */;
+			remoteRef = 1D3E7B6C1C10358C008A155A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0439339A1C1195CF0006B5F8 /* Charts.framework */ = {
+		1D3E7B6F1C10358C008A155A /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 043933991C1195CF0006B5F8 /* PBXContainerItemProxy */;
+			remoteRef = 1D3E7B6E1C10358C008A155A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0439339C1C1195CF0006B5F8 /* ChartsTests.xctest */ = {
+		1D3E7B711C10358C008A155A /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 0439339B1C1195CF0006B5F8 /* PBXContainerItemProxy */;
+			remoteRef = 1D3E7B701C10358C008A155A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -345,13 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3E7B771C105865008A155A /* EnergyBill.swift in Sources */,
 				EB96F46A1BF9C00700127FF0 /* SecondViewController.swift in Sources */,
+				1D3E7B7F1C10CE63008A155A /* EnergyBillTableViewCell.swift in Sources */,
 				1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */,
 				043933A21C1195F50006B5F8 /* House.swift in Sources */,
 				EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */,
+				1D3E7B7B1C10C922008A155A /* EnergyBillTableViewController.swift in Sources */,
 				EBE298C91BFE98BC001A6629 /* BillViewController.swift in Sources */,
 				1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */,
 				EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */,
+				1D3E7B811C117E06008A155A /* EnergyBillViewController.swift in Sources */,
 				EB96F4681BF9C00700127FF0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,10 +369,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		043933A01C1195DC0006B5F8 /* PBXTargetDependency */ = {
+		1D3E7B751C103702008A155A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Charts-iOS";
-			targetProxy = 0439339F1C1195DC0006B5F8 /* PBXContainerItemProxy */;
+			targetProxy = 1D3E7B741C103702008A155A /* PBXContainerItemProxy */;
 		};
 		EB96F4791BF9C00700127FF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
