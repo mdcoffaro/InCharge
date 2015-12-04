@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043933A51C11CEC10006B5F8 /* CompareGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043933A41C11CEC10006B5F8 /* CompareGraphViewController.swift */; };
+		043933AB1C11D2880006B5F8 /* finalcompare.png in Resources */ = {isa = PBXBuildFile; fileRef = 043933A81C11D2880006B5F8 /* finalcompare.png */; };
+		043933AC1C11D2880006B5F8 /* finalchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 043933A91C11D2880006B5F8 /* finalchart.png */; };
+		043933AD1C11D2880006B5F8 /* finalbill.png in Resources */ = {isa = PBXBuildFile; fileRef = 043933AA1C11D2880006B5F8 /* finalbill.png */; };
+		043933AF1C11D8B80006B5F8 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043933AE1C11D8B80006B5F8 /* House.swift */; };
 		1D3E7B721C103702008A155A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3E7B6D1C10358C008A155A /* Charts.framework */; };
 		1D3E7B731C103702008A155A /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3E7B6D1C10358C008A155A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D3E7B771C105865008A155A /* EnergyBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E7B761C105865008A155A /* EnergyBill.swift */; };
@@ -79,6 +84,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		043933A41C11CEC10006B5F8 /* CompareGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareGraphViewController.swift; sourceTree = "<group>"; };
+		043933A81C11D2880006B5F8 /* finalcompare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finalcompare.png; sourceTree = "<group>"; };
+		043933A91C11D2880006B5F8 /* finalchart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finalchart.png; sourceTree = "<group>"; };
+		043933AA1C11D2880006B5F8 /* finalbill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finalbill.png; sourceTree = "<group>"; };
+		043933AE1C11D8B80006B5F8 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		1D3E7B661C10358B008A155A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		1D3E7B761C105865008A155A /* EnergyBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBill.swift; sourceTree = "<group>"; };
 		1D3E7B7A1C10C922008A155A /* EnergyBillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergyBillTableViewController.swift; sourceTree = "<group>"; };
@@ -152,19 +162,23 @@
 		EB96F4621BF9C00700127FF0 /* InCharge */ = {
 			isa = PBXGroup;
 			children = (
-				043933A11C1195F50006B5F8 /* House.swift */,
 				EB96F4651BF9C00700127FF0 /* AppDelegate.swift */,
 				EB96F4671BF9C00700127FF0 /* FirstViewController.swift */,
 				EB96F4691BF9C00700127FF0 /* SecondViewController.swift */,
 				EBE298C81BFE98BC001A6629 /* BillViewController.swift */,
 				1DB294851BFFBCEF00DEB4E5 /* OverviewViewController.swift */,
 				EB96F46B1BF9C00700127FF0 /* Main.storyboard */,
+				043933A41C11CEC10006B5F8 /* CompareGraphViewController.swift */,
 				1D3E7B801C117E06008A155A /* EnergyBillViewController.swift */,
 				1D3E7B7A1C10C922008A155A /* EnergyBillTableViewController.swift */,
+				043933AE1C11D8B80006B5F8 /* House.swift */,
 				1D3E7B761C105865008A155A /* EnergyBill.swift */,
 				EB276BCB1C0EC8DD006F7DC5 /* CompareViewController.swift */,
 				EB96F46E1BF9C00700127FF0 /* Images.xcassets */,
 				EB96F4701BF9C00700127FF0 /* LaunchScreen.xib */,
+				043933A81C11D2880006B5F8 /* finalcompare.png */,
+				043933A91C11D2880006B5F8 /* finalchart.png */,
+				043933AA1C11D2880006B5F8 /* finalbill.png */,
 				EB96F4631BF9C00700127FF0 /* Supporting Files */,
 				1DB294871BFFCA1D00DEB4E5 /* TableViewController.swift */,
 				1D3E7B7E1C10CE63008A155A /* EnergyBillTableViewCell.swift */,
@@ -175,12 +189,6 @@
 		EB96F4631BF9C00700127FF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB6F2EB31C104F8F00EC9467 /* bill2x.png */,
-				EB6F2EB41C104F8F00EC9467 /* compare2x.png */,
-				EB6F2EB51C104F8F00EC9467 /* graph2x.png */,
-				EB6F2EB91C10506100EC9467 /* billFinal.png */,
-				EB6F2EBA1C10506100EC9467 /* compareFinal.png */,
-				EB6F2EBB1C10506100EC9467 /* overviewFinal.png */,
 				EB96F4641BF9C00700127FF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -317,14 +325,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043933AB1C11D2880006B5F8 /* finalcompare.png in Resources */,
 				EB96F46D1BF9C00700127FF0 /* Main.storyboard in Resources */,
 				EB96F4721BF9C00700127FF0 /* LaunchScreen.xib in Resources */,
-				EB6F2EBE1C10506100EC9467 /* overviewFinal.png in Resources */,
-				EB6F2EBC1C10506100EC9467 /* billFinal.png in Resources */,
-				EB6F2EB61C104F8F00EC9467 /* bill2x.png in Resources */,
-				EB6F2EBD1C10506100EC9467 /* compareFinal.png in Resources */,
-				EB6F2EB71C104F8F00EC9467 /* compare2x.png in Resources */,
-				EB6F2EB81C104F8F00EC9467 /* graph2x.png in Resources */,
+				043933AD1C11D2880006B5F8 /* finalbill.png in Resources */,
+				043933AC1C11D2880006B5F8 /* finalchart.png in Resources */,
 				EB96F46F1BF9C00700127FF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,15 +350,16 @@
 			files = (
 				1D3E7B771C105865008A155A /* EnergyBill.swift in Sources */,
 				EB96F46A1BF9C00700127FF0 /* SecondViewController.swift in Sources */,
+				043933AF1C11D8B80006B5F8 /* House.swift in Sources */,
 				1D3E7B7F1C10CE63008A155A /* EnergyBillTableViewCell.swift in Sources */,
 				1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */,
-				043933A21C1195F50006B5F8 /* House.swift in Sources */,
 				EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */,
 				1D3E7B7B1C10C922008A155A /* EnergyBillTableViewController.swift in Sources */,
 				EBE298C91BFE98BC001A6629 /* BillViewController.swift in Sources */,
 				1DB294861BFFBCEF00DEB4E5 /* OverviewViewController.swift in Sources */,
 				EB96F4661BF9C00700127FF0 /* AppDelegate.swift in Sources */,
 				1D3E7B811C117E06008A155A /* EnergyBillViewController.swift in Sources */,
+				043933A51C11CEC10006B5F8 /* CompareGraphViewController.swift in Sources */,
 				EB96F4681BF9C00700127FF0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

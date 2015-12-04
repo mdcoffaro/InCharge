@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -78,14 +79,14 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rhw-41-aqY" id="yX7-ce-nui">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-CT-Ylo">
                                             <rect key="frame" x="33" y="10" width="255" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -124,28 +125,28 @@
                                 <rect key="frame" x="72" y="28" width="0.0" height="0.0"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-Cx-mFf">
                                 <rect key="frame" x="167" y="107" width="139" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niv-EO-c0C">
                                 <rect key="frame" x="0.0" y="78" width="320" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paid: ON TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-EJ-eHt">
                                 <rect key="frame" x="0.0" y="480" width="320" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-6G-5LR" customClass="BarChartView" customModule="Charts">
@@ -157,7 +158,7 @@
                                 <rect key="frame" x="80" y="107" width="87" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -230,11 +231,13 @@
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="135" width="320" height="299"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="6" width="320" height="287"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -311,11 +314,12 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-F7-wCJ">
-                                <rect key="frame" x="88" y="445" width="102" height="30"/>
+                                <rect key="frame" x="106" y="445" width="67" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Print Shit Bitch"/>
+                                <state key="normal" title="Compare!"/>
                                 <connections>
                                     <action selector="compareSelected:" destination="piJ-oZ-kMl" eventType="touchUpInside" id="3Ae-aG-9TJ"/>
+                                    <segue destination="VOW-Ji-1II" kind="show" id="hGZ-48-cXE"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-go-ect">
@@ -529,6 +533,85 @@
             </objects>
             <point key="canvasLocation" x="1604" y="19"/>
         </scene>
+        <!--Compare Graph View Controller-->
+        <scene sceneID="PJm-aj-JhH">
+            <objects>
+                <viewController id="VOW-Ji-1II" customClass="CompareGraphViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OW9-fY-RxV"/>
+                        <viewControllerLayoutGuide type="bottom" id="own-dY-gPi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KeB-NT-Cwp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sME-t6-5di">
+                                <rect key="frame" x="38" y="72" width="182" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="54Q-ro-Smt">
+                                <rect key="frame" x="20" y="435" width="280" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Bg8-kp-1HP"/>
+                                    <constraint firstAttribute="height" constant="28" id="sCk-6C-S5c"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Line Graph"/>
+                                    <segment title="Bar Graph"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="9j9-Bn-b3U"/>
+                                    <action selector="indexChanged:" destination="VOW-Ji-1II" eventType="valueChanged" id="w6h-vu-wfL"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A92-bR-8RP">
+                                <rect key="frame" x="20" y="466" width="280" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="YlW-kg-RHQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="ofn-od-Deo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Day"/>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                    <segment title="Year"/>
+                                </segments>
+                                <connections>
+                                    <action selector="unitIndexChanged:" destination="VOW-Ji-1II" eventType="valueChanged" id="2bG-Ig-a6h"/>
+                                    <action selector="unitIndexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="arV-cg-R6c"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pre-tR-bNQ" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-5j-1Iv" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="126" width="320" height="287"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="pre-tR-bNQ" id="ZWW-nL-Cw2"/>
+                        <outlet property="boolLabel" destination="sME-t6-5di" id="RFr-Ze-rHW"/>
+                        <outlet property="graphTypeSegmentedControl" destination="54Q-ro-Smt" id="pIo-vp-99H"/>
+                        <outlet property="lineChart" destination="ISL-5j-1Iv" id="zwg-3s-FVo"/>
+                        <outlet property="unitTypeSegmentedControl" destination="A92-bR-8RP" id="WwC-NY-jpJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eb0-cS-C5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="19"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Gy3-6n-KZK">
             <objects>
@@ -553,7 +636,7 @@
         <scene sceneID="f8o-hk-gmk">
             <objects>
                 <navigationController id="5Tx-G6-MNr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Overview" image="first" selectedImage="first" id="EGh-ZH-QNg"/>
+                    <tabBarItem key="tabBarItem" title="Overview" image="finalchart.png" selectedImage="finalchart.png" id="EGh-ZH-QNg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tDL-Nw-2tK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -572,7 +655,7 @@
         <scene sceneID="9zc-FE-F3a">
             <objects>
                 <navigationController id="rOi-R8-eLN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Energy Bill" selectedImage="second" id="wlU-1z-cmA"/>
+                    <tabBarItem key="tabBarItem" title="Energy Bill" image="finalbill.png" selectedImage="finalbill.png" id="wlU-1z-cmA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5M-eo-KOk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -591,7 +674,7 @@
         <scene sceneID="6nt-bQ-Jwe">
             <objects>
                 <navigationController id="wAk-w7-YZq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compare" image="second" selectedImage="second" id="p1A-Ls-cKn"/>
+                    <tabBarItem key="tabBarItem" title="Compare" image="finalcompare.png" selectedImage="finalcompare.png" id="p1A-Ls-cKn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVV-6G-fzL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -630,7 +713,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="finalbill.png" width="30" height="30"/>
+        <image name="finalchart.png" width="31" height="31"/>
+        <image name="finalcompare.png" width="31" height="31"/>
     </resources>
 </document>

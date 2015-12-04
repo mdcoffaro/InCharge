@@ -39,6 +39,7 @@ class CompareViewController: UIViewController {
     
     var selectedPeople = [String: Bool]()
     var selectedRooms = [String: Bool]()
+    var passer = selectedItems()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,20 +163,20 @@ class CompareViewController: UIViewController {
     }
     
     @IBAction func compareSelected(sender: UIButton) {
-        print("--------------------------------")
-        print("Selected people")
-        for (key,val) in selectedPeople {
-            print("\(key) \t \(val)")
-        }
-        print("")
+//        print("--------------------------------")
+//        print("Selected people")
+//        for (key,val) in selectedPeople {
+//            print("\(key) \t \(val)")
+//        }
+//        print("")
+//        
+//        print("Selected people")
+//        for (key,val) in selectedRooms {
+//            print("\(key) \t \(val)")
+//        }
+//        print("--------------------------------")
         
-        print("Selected people")
-        for (key,val) in selectedRooms {
-            print("\(key) \t \(val)")
-        }
-        print("--------------------------------")
-        
-        let passer = selectedItems()
+//        let passer = selectedItems()
         if (compareTypeSelector.selectedSegmentIndex == 0){
             passer.showPeople = true
         } else {
@@ -188,10 +189,16 @@ class CompareViewController: UIViewController {
         }
         for (key,val) in selectedRooms {
             if(val){
-                passer.selectedPeople.append(key)
+                passer.selectedRooms.append(key)
             }
 
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let compareDetailViewController = segue.destinationViewController as! CompareGraphViewController
+        
+        compareDetailViewController.passer = passer
     }
 }
 
