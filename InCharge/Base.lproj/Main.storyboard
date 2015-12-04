@@ -345,13 +345,13 @@
                                 <animations/>
                                 <state key="normal" title="Get Suggestions"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="135" width="320" height="299"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="135" width="320" height="299"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -404,7 +404,7 @@
             </objects>
             <point key="canvasLocation" x="1870" y="-854"/>
         </scene>
-        <!--Compare-->
+        <!--Compare View Controller-->
         <scene sceneID="UTN-iP-v6b">
             <objects>
                 <viewController id="piJ-oZ-kMl" customClass="CompareViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
@@ -416,40 +416,235 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jo-pp-Udm">
-                                <rect key="frame" x="0.0" y="399" width="161" height="112"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lGe-PO-rGW">
+                                <rect key="frame" x="45" y="84" width="231" height="29"/>
                                 <animations/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kC5-pc-v9K">
-                                <rect key="frame" x="159" y="399" width="161" height="112"/>
+                                <segments>
+                                    <segment title="Compare People"/>
+                                    <segment title="Compare Rooms"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeCompareType:" destination="piJ-oZ-kMl" eventType="valueChanged" id="2ph-mT-3nM"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-F7-wCJ">
+                                <rect key="frame" x="88" y="445" width="102" height="30"/>
                                 <animations/>
-                            </pickerView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-7D-G5e" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="64" width="320" height="322"/>
+                                <state key="normal" title="Print Shit Bitch"/>
+                                <connections>
+                                    <action selector="compareSelected:" destination="piJ-oZ-kMl" eventType="touchUpInside" id="3Ae-aG-9TJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-go-ect">
+                                <rect key="frame" x="18" y="151" width="283" height="266"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Who You Want to See" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-o4-dxR">
+                                        <rect key="frame" x="40" y="8" width="203" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRn-8b-2cK" userLabel="Mom">
+                                        <rect key="frame" x="96" y="65" width="39" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuw-u0-3aP" userLabel="Dad">
+                                        <rect key="frame" x="104" y="113" width="31" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-2c-sf1" userLabel="John">
+                                        <rect key="frame" x="97" y="164" width="38" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-M2-c0H" userLabel="Lauren">
+                                        <rect key="frame" x="82" y="213" width="53" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IW6-dd-Xmm">
+                                        <rect key="frame" x="210" y="65" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="selectMom:" destination="piJ-oZ-kMl" eventType="valueChanged" id="BUw-Mn-F7X"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odd-s3-7HB">
+                                        <rect key="frame" x="210" y="108" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="selectDad:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Uvf-Fj-CEd"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-AI-BXg">
+                                        <rect key="frame" x="210" y="159" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="johnSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="jMy-TS-Inl"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-da-oTn">
+                                        <rect key="frame" x="210" y="208" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="laurenSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="jPY-1f-zjY"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-rX-n3P">
+                                <rect key="frame" x="30" y="169" width="260" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick What Rooms you Want to see" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohM-W5-E6F">
+                                        <rect key="frame" x="0.0" y="13" width="262" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dining Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-vl-qEJ" userLabel="Dining Room">
+                                        <rect key="frame" x="8" y="94" width="98" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-lL-chL" userLabel="Garage">
+                                        <rect key="frame" x="8" y="128" width="56" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Master Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-X6-nXv" userLabel="Master Bedroom">
+                                        <rect key="frame" x="8" y="165" width="128" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-bD-eGs" userLabel="Lauren's Room">
+                                        <rect key="frame" x="8" y="228" width="114" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-R3-ljP" userLabel="John's Room">
+                                        <rect key="frame" x="8" y="199" width="99" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Living Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwD-ue-odd" userLabel="Living Room">
+                                        <rect key="frame" x="8" y="65" width="94" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kitchen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-f4-Ov5" userLabel="Kitchen">
+                                        <rect key="frame" x="6" y="36" width="58" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-lj-poT">
+                                        <rect key="frame" x="207" y="89" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="drSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="SvH-9Z-u48"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoH-J7-BPc">
+                                        <rect key="frame" x="207" y="31" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="kSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="7C9-5N-kFa"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvV-66-iW9">
+                                        <rect key="frame" x="207" y="123" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="gSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Tg8-ek-nWs"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Rn-ldy">
+                                        <rect key="frame" x="207" y="160" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="mbSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="qDg-RY-UMz"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guD-ZY-KSW">
+                                        <rect key="frame" x="207" y="194" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="jrSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Cef-7V-r2w"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6T8-Tw-Qcp">
+                                        <rect key="frame" x="207" y="223" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="larSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Af2-u3-A8X"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfY-WM-ohu">
+                                        <rect key="frame" x="211" y="60" width="51" height="31"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="lrSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="cid-fW-dGA"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Compare" id="drj-Lk-2Gy"/>
+                    <navigationItem key="navigationItem" id="drj-Lk-2Gy">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="leftItemSelector" destination="5Jo-pp-Udm" id="0cn-te-fWL"/>
-                        <outlet property="lineChart" destination="8vg-7D-G5e" id="QTo-Iz-Q3W"/>
-                        <outlet property="rightItemSelector" destination="kC5-pc-v9K" id="OsL-F0-k3l"/>
+                        <outlet property="compareButton" destination="EVb-F7-wCJ" id="UDw-Xv-FsE"/>
+                        <outlet property="comparePeopleView" destination="6IS-go-ect" id="jO1-HG-mUA"/>
+                        <outlet property="compareRoomsView" destination="r6w-rX-n3P" id="6v3-6D-YUV"/>
+                        <outlet property="compareTypeSelector" destination="lGe-PO-rGW" id="5Ab-yF-l61"/>
+                        <outlet property="dadSwitch" destination="odd-s3-7HB" id="rZR-K4-qp1"/>
+                        <outlet property="drSwitch" destination="yuK-lj-poT" id="vC5-m4-ciT"/>
+                        <outlet property="gSwitch" destination="hvV-66-iW9" id="OvO-GM-Su3"/>
+                        <outlet property="johnSwitch" destination="cWH-AI-BXg" id="m3c-uu-eCc"/>
+                        <outlet property="jrSwitch" destination="guD-ZY-KSW" id="UeI-r4-aqk"/>
+                        <outlet property="kSwitch" destination="eoH-J7-BPc" id="t8S-8F-qNM"/>
+                        <outlet property="larSwitch" destination="6T8-Tw-Qcp" id="p7W-bh-EKg"/>
+                        <outlet property="laurenSwitch" destination="OlZ-da-oTn" id="ltB-EW-ss6"/>
+                        <outlet property="lrSwitch" destination="xfY-WM-ohu" id="yjP-At-tFb"/>
+                        <outlet property="mbSwitch" destination="bX3-Rn-ldy" id="jHq-Yu-36p"/>
+                        <outlet property="momSwitch" destination="IW6-dd-Xmm" id="mrV-tS-nql"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmT-3X-0IY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="zUq-cQ-cvP" customClass="BarChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </objects>
-            <point key="canvasLocation" x="1819" y="12"/>
+            <point key="canvasLocation" x="1604" y="19"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gy3-6n-KZK">

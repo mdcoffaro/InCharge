@@ -9,69 +9,204 @@
 import UIKit
 import Charts
 
+class selectedItems {
+    var showPeople:Bool = false
+    var selectedPeople: [String] = []
+    var selectedRooms: [String] = []
+}
 
 class CompareViewController: UIViewController {
     
-    @IBOutlet weak var lineChart: LineChartView!
-    @IBOutlet weak var leftItemSelector: UIPickerView!
-    @IBOutlet weak var rightItemSelector: UIPickerView!
+
+    @IBOutlet weak var compareTypeSelector: UISegmentedControl!
+    @IBOutlet weak var comparePeopleView: UIView!
+    @IBOutlet weak var compareRoomsView: UIScrollView!
     
+    @IBOutlet weak var momSwitch: UISwitch!
+    @IBOutlet weak var dadSwitch: UISwitch!
+    @IBOutlet weak var johnSwitch: UISwitch!
+    @IBOutlet weak var laurenSwitch: UISwitch!
     
-    let hours = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"]
-    let days = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-    let years = ["2012", "2013", "2014", "2015"]
+    @IBOutlet weak var kSwitch: UISwitch!
+    @IBOutlet weak var lrSwitch: UISwitch!
+    @IBOutlet weak var drSwitch: UISwitch!
+    @IBOutlet weak var gSwitch: UISwitch!
+    @IBOutlet weak var mbSwitch: UISwitch!
+    @IBOutlet weak var jrSwitch: UISwitch!
+    @IBOutlet weak var larSwitch: UISwitch!
     
-    let unitsUsedHours = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-    let unitsUsedDays = [20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 20.0, 4.0, 6.0, 3.0, 12.0, 12.0]
-    let unitsUsedMonths = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-    let unitsUsedYears = [20.0, 4.0, 6.0, 3.0]
+    @IBOutlet weak var compareButton: UIButton!
+    
+    var selectedPeople = [String: Bool]()
+    var selectedRooms = [String: Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setChartYears(years, values: unitsUsedYears)
+        compareRoomsView.hidden = true
         
+        selectedPeople["Mom"] = true
+        selectedPeople["Dad"] = true
+        selectedPeople["John"] = true
+        selectedPeople["Lauren"] = true
+        
+        selectedRooms["Kitchen"] = true
+        selectedRooms["Living Room"] = true
+        selectedRooms["Dining Room"] = true
+        selectedRooms["Garage"] = true
+        selectedRooms["Master Bedroom"] = true
+        selectedRooms["John's Room"] = true
+        selectedRooms["Lauren's Room"] = true
+    }
+
+    @IBAction func changeCompareType(sender: UISegmentedControl){
+        switch compareTypeSelector.selectedSegmentIndex{
+            case 0:
+                comparePeopleView.hidden = false
+                compareRoomsView.hidden = true
+            case 1:
+                comparePeopleView.hidden = true
+                compareRoomsView.hidden = false
+            default:
+                break
+        }
+    }
+
+//    People Switches
+    @IBAction func selectMom(sender: UISwitch) {
+        if (momSwitch.on){
+            selectedPeople["Mom"] = true
+        } else {
+            selectedPeople["Mom"] = false
+        }
+    }
+  
+    @IBAction func selectDad(sender: UISwitch) {
+        if (dadSwitch.on){
+            selectedPeople["Dad"] = true
+        } else {
+            selectedPeople["Dad"] = false
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func johnSelected(sender: UISwitch) {
+        if (johnSwitch.on){
+            selectedPeople["John"] = true
+        } else {
+            selectedPeople["John"] = false
+        }
     }
     
-    func setChartYears(dataPoints: [String], values: [Double]) {
-        
-        var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
-        
-        var dataEntries: [ChartDataEntry] = []
-        let dataPoints = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]
-        let values = [18.0, 4.0, 6.0, 3.0, 12.0, 16.0, 30]
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
+    @IBAction func laurenSelected(sender: UISwitch) {
+        if (laurenSwitch.on){
+            selectedPeople["Lauren"] = true
+        } else {
+            selectedPeople["Lauren"] = false
         }
-        
-        let lineChartDataSet1: LineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used A")
-        allLineChartDataSets.append(lineChartDataSet1)
-        
-        
-        var dataEntries2: [ChartDataEntry] = []
-        let dataPoints2 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug"]
-        let values2 = [21.0, 5.0, 7.0, 10.0, 11.0, 18.0, 20]
-        for i in 0..<dataPoints2.count {
-            let dataEntry2 = ChartDataEntry(value: values2[i], xIndex: i)
-            dataEntries2.append(dataEntry2)
+    }
+    
+//    Room Switches
+    @IBAction func kSelected(sender: UISwitch) {
+        if (kSwitch.on){
+            selectedRooms["Kitchen"] = true
+        } else {
+            selectedRooms["Kitchen"] = false
         }
+    }
+
+    @IBAction func lrSelected(sender: UISwitch) {
+        if (lrSwitch.on){
+            selectedRooms["Living Room"] = true
+        } else {
+            selectedRooms["Living Room"] = false
+        }
+    }
+    
+    @IBAction func drSelected(sender: UISwitch) {
+        if (drSwitch.on){
+            selectedRooms["Dining Room"] = true
+        } else {
+            selectedRooms["Dining Room"] = false
+        }
+    }
+    
+    @IBAction func gSelected(sender: UISwitch) {
+        if (gSwitch.on){
+            selectedRooms["Garage"] = true
+        } else {
+            selectedRooms["Garage"] = false
+        }
+    }
+    
+    @IBAction func mbSelected(sender: UISwitch) {
+        if (mbSwitch.on){
+            selectedRooms["Master Bedroom"] = true
+        } else {
+            selectedRooms["Master Bedroom"] = false
+        }
+    }
+    
+    @IBAction func jrSelected(sender: UISwitch) {
+        if (jrSwitch.on){
+            selectedRooms["John's Room"] = true
+        } else {
+            selectedRooms["John's Room"] = false
+        }
+    }
+    
+    @IBAction func larSelected(sender: UISwitch) {
+        if (larSwitch.on){
+            selectedRooms["Lauren's Room"] = true
+        } else {
+            selectedRooms["Lauren's Room"] = false
+        }
+    }
+    
+    @IBAction func compareSelected(sender: UIButton) {
+        print("--------------------------------")
+        print("Selected people")
+        for (key,val) in selectedPeople {
+            print("\(key) \t \(val)")
+        }
+        print("")
         
-        let lineChartDataSet2 = LineChartDataSet(yVals: dataEntries2, label: "Units Used B")
-        lineChartDataSet2.setColor(UIColor.redColor())
-        lineChartDataSet2.setCircleColor(UIColor.redColor())
-        allLineChartDataSets.append(lineChartDataSet2)
+        print("Selected people")
+        for (key,val) in selectedRooms {
+            print("\(key) \t \(val)")
+        }
+        print("--------------------------------")
         
-        let allDataPoints: [String] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-        
-        let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
-        
-        lineChart.data = lineChartData
+        let passer = selectedItems()
+        if (compareTypeSelector.selectedSegmentIndex == 0){
+            passer.showPeople = true
+        } else {
+            passer.showPeople = false
+        }
+        for (key,val) in selectedPeople {
+            if(val){
+                passer.selectedPeople.append(key)
+            }
+        }
+        for (key,val) in selectedRooms {
+            if(val){
+                passer.selectedPeople.append(key)
+            }
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
