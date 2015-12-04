@@ -12,21 +12,17 @@ import Charts
 class CompareGraphViewController: UIViewController {
     
     var passer: selectedItems?
-    @IBOutlet weak var boolLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         house.loadPeople()
         house.loadRooms()
-        
-        boolLabel.text = String(passer?.showPeople)
 
         // Do any additional setup after loading the view.
         lineChart.noDataText = "Looks like we don't have data for this month yet!"
-        barChart.noDataText = "Looks like we don't have data for this month yet!"
+
         setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: passer!.selectedPeople)
-        barChart.hidden = true
 
     }
 
@@ -35,9 +31,8 @@ class CompareGraphViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBOutlet weak var lineChart: LineChartView!
-    @IBOutlet weak var barChart: BarChartView!
-    @IBOutlet weak var graphTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var unitTypeSegmentedControl: UISegmentedControl!
     
     var house = House()
@@ -57,88 +52,26 @@ class CompareGraphViewController: UIViewController {
     
 
     
-    @IBAction func indexChanged(sender: UISegmentedControl) {
-        switch graphTypeSegmentedControl.selectedSegmentIndex{
-        case 0:
-            lineChart.hidden = false
-            barChart.hidden = true
-            switch unitTypeSegmentedControl.selectedSegmentIndex{
-            case 0:
-                setChartHours(hours, values: house.people["John"]!.hours, graphType: "Line", itemsToRender: passer!.selectedPeople)
-            case 1:
-                setChartDays(days, values: unitsUsedDays, graphType: "Line")
-            case 2:
-                setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
-            case 3:
-                setChartYears(years, values: unitsUsedYears, graphType: "Line")
-            default:
-                break;
-            }
-        case 1:
-            barChart.hidden = false
-            lineChart.hidden = true
-            switch unitTypeSegmentedControl.selectedSegmentIndex{
-            case 0:
-                setChartHours(hours, values: unitsUsedHours, graphType: "Bar", itemsToRender: passer!.selectedPeople)
-            case 1:
-                setChartDays(days, values: unitsUsedDays, graphType: "Bar")
-            case 2:
-                setChartMonths(months, values: unitsUsedMonths, graphType: "Bar")
-            case 3:
-                setChartYears(years, values: unitsUsedYears, graphType: "Bar")
-            default:
-                break;
-            }
-        default:
-            break;
-        }
-    }
+
     
     @IBAction func unitIndexChanged(sender: UISegmentedControl) {
         switch unitTypeSegmentedControl.selectedSegmentIndex{
         case 0:
-            if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
-                setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: passer!.selectedPeople)
-            }else{
-                setChartHours(hours, values: unitsUsedHours, graphType: "Bar", itemsToRender: passer!.selectedPeople)
-            }
+            setChartHours(hours, values: unitsUsedHours, graphType: "Line", itemsToRender: passer!.selectedPeople)
         case 1:
-            if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
-                setChartDays(days, values: unitsUsedDays, graphType: "Line")
-            }else{
-                setChartDays(days, values: unitsUsedDays, graphType: "Bar")
-            }
+            setChartDays(days, values: unitsUsedDays, graphType: "Line")
         case 2:
-            if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
-                setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
-            }else{
-                setChartMonths(months, values: unitsUsedMonths, graphType: "Bar")
-            }
+            setChartMonths(months, values: unitsUsedMonths, graphType: "Line")
         case 3:
-            if(graphTypeSegmentedControl.selectedSegmentIndex == 0){
-                setChartYears(years, values: unitsUsedYears, graphType: "Line")
-            }else{
-                setChartYears(years, values: unitsUsedYears, graphType: "Bar")
-            }
+            setChartYears(years, values: unitsUsedYears, graphType: "Line")
         default:
             break;
         }
-
     }
     
-      
+       
     func setChartHours(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
-        if(graphType == "Bar"){
-            var dataEntries: [BarChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
-            }
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
-        }else{
+
             var allLineChartDataSets: [LineChartDataSet] = [LineChartDataSet]()
             var dataEntries: [ChartDataEntry] = []
             let dataPoints = hours
@@ -155,21 +88,11 @@ class CompareGraphViewController: UIViewController {
             let allDataPoints: [String] = hours
             let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
             lineChart.data = lineChartData
-        }
+
     }
     
     func setChartDays(dataPoints: [String], values: [Double], graphType: String) {
-        if(graphType == "Bar"){
-            var dataEntries: [BarChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
-            }
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
-        }else{
+
             var dataEntries: [ChartDataEntry] = []
             
             for i in 0..<dataPoints.count {
@@ -179,21 +102,10 @@ class CompareGraphViewController: UIViewController {
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
-        }
     }
     
     func setChartMonths(dataPoints: [String], values: [Double], graphType: String) {
-        if(graphType == "Bar"){
-            var dataEntries: [BarChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
-            }
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
-        }else{
+
             var dataEntries: [ChartDataEntry] = []
             
             for i in 0..<dataPoints.count {
@@ -203,21 +115,10 @@ class CompareGraphViewController: UIViewController {
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
-        }
     }
     
     func setChartYears(dataPoints: [String], values: [Double], graphType: String) {
-        if(graphType == "Bar"){
-            var dataEntries: [BarChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
-                dataEntries.append(dataEntry)
-            }
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
-        }else{
+
             var dataEntries: [ChartDataEntry] = []
             
             for i in 0..<dataPoints.count {
@@ -227,8 +128,5 @@ class CompareGraphViewController: UIViewController {
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
-        }
     }
-    
-
 }

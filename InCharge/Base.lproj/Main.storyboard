@@ -228,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="135" width="320" height="299"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="6" width="320" height="287"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="287"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -301,7 +301,7 @@
                                 <state key="normal" title="Compare!"/>
                                 <connections>
                                     <action selector="compareSelected:" destination="piJ-oZ-kMl" eventType="touchUpInside" id="3Ae-aG-9TJ"/>
-                                    <segue destination="VOW-Ji-1II" kind="show" id="hGZ-48-cXE"/>
+                                    <segue destination="b9t-Pt-ORG" kind="show" id="jYV-gx-c3h"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-go-ect">
@@ -516,46 +516,28 @@
             <point key="canvasLocation" x="1604" y="19"/>
         </scene>
         <!--Compare Graph View Controller-->
-        <scene sceneID="PJm-aj-JhH">
+        <scene sceneID="R58-pV-bbu">
             <objects>
-                <viewController id="VOW-Ji-1II" customClass="CompareGraphViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b9t-Pt-ORG" customClass="CompareGraphViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OW9-fY-RxV"/>
-                        <viewControllerLayoutGuide type="bottom" id="own-dY-gPi"/>
+                        <viewControllerLayoutGuide type="top" id="4WP-zI-3C5"/>
+                        <viewControllerLayoutGuide type="bottom" id="YRq-Zh-DNv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KeB-NT-Cwp">
+                    <view key="view" contentMode="scaleToFill" id="cME-0v-zab">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sME-t6-5di">
-                                <rect key="frame" x="38" y="72" width="182" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-Mw-ALa" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="117" width="320" height="299"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="54Q-ro-Smt">
-                                <rect key="frame" x="20" y="435" width="280" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PqN-mv-T9j">
+                                <rect key="frame" x="20" y="450" width="280" height="29"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Bg8-kp-1HP"/>
-                                    <constraint firstAttribute="height" constant="28" id="sCk-6C-S5c"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Line Graph"/>
-                                    <segment title="Bar Graph"/>
-                                </segments>
-                                <connections>
-                                    <action selector="indexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="9j9-Bn-b3U"/>
-                                    <action selector="indexChanged:" destination="VOW-Ji-1II" eventType="valueChanged" id="w6h-vu-wfL"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A92-bR-8RP">
-                                <rect key="frame" x="20" y="466" width="280" height="29"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="YlW-kg-RHQ"/>
-                                    <constraint firstAttribute="width" constant="280" id="ofn-od-Deo"/>
+                                    <constraint firstAttribute="width" constant="280" id="NmN-1P-Wqx"/>
+                                    <constraint firstAttribute="height" constant="28" id="qhe-89-MeW"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Day"/>
@@ -564,35 +546,22 @@
                                     <segment title="Year"/>
                                 </segments>
                                 <connections>
-                                    <action selector="unitIndexChanged:" destination="VOW-Ji-1II" eventType="valueChanged" id="2bG-Ig-a6h"/>
-                                    <action selector="unitIndexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="arV-cg-R6c"/>
+                                    <action selector="unitIndexChanged:" destination="b9t-Pt-ORG" eventType="valueChanged" id="4FI-Zl-8O8"/>
+                                    <action selector="unitIndexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="Ks7-Mo-Fjm"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pre-tR-bNQ" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="141" width="320" height="287"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-5j-1Iv" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="126" width="320" height="287"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="barChart" destination="pre-tR-bNQ" id="ZWW-nL-Cw2"/>
-                        <outlet property="boolLabel" destination="sME-t6-5di" id="RFr-Ze-rHW"/>
-                        <outlet property="graphTypeSegmentedControl" destination="54Q-ro-Smt" id="pIo-vp-99H"/>
-                        <outlet property="lineChart" destination="ISL-5j-1Iv" id="zwg-3s-FVo"/>
-                        <outlet property="unitTypeSegmentedControl" destination="A92-bR-8RP" id="WwC-NY-jpJ"/>
+                        <outlet property="lineChart" destination="9AE-Mw-ALa" id="e5C-k8-j3A"/>
+                        <outlet property="unitTypeSegmentedControl" destination="PqN-mv-T9j" id="lcF-b6-NtH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eb0-cS-C5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jt7-MO-mTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="19"/>
+            <point key="canvasLocation" x="2319" y="35"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gy3-6n-KZK">
