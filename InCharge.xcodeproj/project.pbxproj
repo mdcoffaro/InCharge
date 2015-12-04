@@ -152,6 +152,7 @@
 		EB96F4621BF9C00700127FF0 /* InCharge */ = {
 			isa = PBXGroup;
 			children = (
+				043933A11C1195F50006B5F8 /* House.swift */,
 				EB96F4651BF9C00700127FF0 /* AppDelegate.swift */,
 				EB96F4671BF9C00700127FF0 /* FirstViewController.swift */,
 				EB96F4691BF9C00700127FF0 /* SecondViewController.swift */,
@@ -174,6 +175,12 @@
 		EB96F4631BF9C00700127FF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB6F2EB31C104F8F00EC9467 /* bill2x.png */,
+				EB6F2EB41C104F8F00EC9467 /* compare2x.png */,
+				EB6F2EB51C104F8F00EC9467 /* graph2x.png */,
+				EB6F2EB91C10506100EC9467 /* billFinal.png */,
+				EB6F2EBA1C10506100EC9467 /* compareFinal.png */,
+				EB6F2EBB1C10506100EC9467 /* overviewFinal.png */,
 				EB96F4641BF9C00700127FF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -312,6 +319,12 @@
 			files = (
 				EB96F46D1BF9C00700127FF0 /* Main.storyboard in Resources */,
 				EB96F4721BF9C00700127FF0 /* LaunchScreen.xib in Resources */,
+				EB6F2EBE1C10506100EC9467 /* overviewFinal.png in Resources */,
+				EB6F2EBC1C10506100EC9467 /* billFinal.png in Resources */,
+				EB6F2EB61C104F8F00EC9467 /* bill2x.png in Resources */,
+				EB6F2EBD1C10506100EC9467 /* compareFinal.png in Resources */,
+				EB6F2EB71C104F8F00EC9467 /* compare2x.png in Resources */,
+				EB6F2EB81C104F8F00EC9467 /* graph2x.png in Resources */,
 				EB96F46F1BF9C00700127FF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +347,7 @@
 				EB96F46A1BF9C00700127FF0 /* SecondViewController.swift in Sources */,
 				1D3E7B7F1C10CE63008A155A /* EnergyBillTableViewCell.swift in Sources */,
 				1DB294881BFFCA1D00DEB4E5 /* TableViewController.swift in Sources */,
+				043933A21C1195F50006B5F8 /* House.swift in Sources */,
 				EB276BCC1C0EC8DD006F7DC5 /* CompareViewController.swift in Sources */,
 				1D3E7B7B1C10C922008A155A /* EnergyBillTableViewController.swift in Sources */,
 				EBE298C91BFE98BC001A6629 /* BillViewController.swift in Sources */,
