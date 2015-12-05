@@ -124,17 +124,12 @@ class OverviewViewController: UIViewController {
                 let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "$ used")
             let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
             barChart.data = barChartData
             let legend = barChart.legend
             legend.wordWrapEnabled = true
-=======
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+
         }else{
             var dataEntries: [ChartDataEntry] = []
             
@@ -142,17 +137,12 @@ class OverviewViewController: UIViewController {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "$ used")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
             let legend = lineChart.legend
             legend.wordWrapEnabled = true
-=======
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+
         }
     }
     
@@ -164,17 +154,11 @@ class OverviewViewController: UIViewController {
                 let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "$ used")
             let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
             barChart.data = barChartData
             let legend = barChart.legend
             legend.wordWrapEnabled = true
-=======
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
         }else{
             var dataEntries: [ChartDataEntry] = []
             
@@ -182,17 +166,12 @@ class OverviewViewController: UIViewController {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "$ used")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
             let legend = lineChart.legend
             legend.wordWrapEnabled = true
-=======
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+
         }
     }
     
@@ -204,17 +183,11 @@ class OverviewViewController: UIViewController {
                 let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "$ used")
             let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
             barChart.data = barChartData
             let legend = barChart.legend
             legend.wordWrapEnabled = true
-=======
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
         }else{
             var dataEntries: [ChartDataEntry] = []
             
@@ -222,17 +195,11 @@ class OverviewViewController: UIViewController {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "$ used")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
             let legend = lineChart.legend
             legend.wordWrapEnabled = true
-=======
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
         }
     }
     
@@ -244,17 +211,12 @@ class OverviewViewController: UIViewController {
                 let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "$ used")
             let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
             barChart.data = barChartData
             let legend = barChart.legend
             legend.wordWrapEnabled = true
-=======
-            let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-            barChart.data = barChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+
         }else{
             var dataEntries: [ChartDataEntry] = []
             
@@ -262,17 +224,12 @@ class OverviewViewController: UIViewController {
                 let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
                 dataEntries.append(dataEntry)
             }
-<<<<<<< HEAD
             let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "$ used")
             let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
             lineChart.data = lineChartData
             let legend = lineChart.legend
             legend.wordWrapEnabled = true
-=======
-            let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Units Used kWH")
-            let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
-            lineChart.data = lineChartData
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+
         }
     }
 

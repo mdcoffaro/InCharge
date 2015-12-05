@@ -18,20 +18,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="November 2015 - Total Cost: $421" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heD-PV-rtD">
-                                <rect key="frame" x="20" y="64" width="280" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Ci5-Q4-1wZ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="m1F-0c-IIy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-=======
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6x-i7-O8I">
                                 <rect key="frame" x="254" y="20" width="50" height="30"/>
                                 <animations/>
@@ -40,46 +26,32 @@
                                     <segue destination="sjd-Ys-d5q" kind="show" id="ap8-Za-9Xe"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBX-iC-hHc" customClass="BarChartView" customModule="Charts">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="120" width="320" height="264"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-=======
-                                <rect key="frame" x="0.0" y="76" width="320" height="371"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="January 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOj-AF-pLf">
-                                <rect key="frame" x="20" y="20" width="104" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="January 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqv-qI-ENP">
+                                <rect key="frame" x="20" y="20" width="300" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Cost: $122" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-AS-2Tx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Cost: $122" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qh-Uf-9Gi">
                                 <rect key="frame" x="20" y="49" width="300" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBX-iC-hHc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="78" width="320" height="362"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SVy-Eb-VVY" firstAttribute="top" secondItem="oBX-iC-hHc" secondAttribute="bottom" id="0kU-PD-toD"/>
-<<<<<<< HEAD
-                            <constraint firstItem="heD-PV-rtD" firstAttribute="centerX" secondItem="ZUb-66-NGc" secondAttribute="centerX" id="GT2-KS-AAd"/>
                             <constraint firstItem="y6x-i7-O8I" firstAttribute="trailing" secondItem="ZUb-66-NGc" secondAttribute="trailingMargin" id="OyG-wN-Bys"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oBX-iC-hHc" secondAttribute="trailing" id="VKA-AP-wWC"/>
-                            <constraint firstItem="oBX-iC-hHc" firstAttribute="top" secondItem="heD-PV-rtD" secondAttribute="bottom" id="WFN-3n-QJ6"/>
-=======
-                            <constraint firstItem="y6x-i7-O8I" firstAttribute="trailing" secondItem="ZUb-66-NGc" secondAttribute="trailingMargin" id="OyG-wN-Bys"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oBX-iC-hHc" secondAttribute="trailing" id="VKA-AP-wWC"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                             <constraint firstItem="oBX-iC-hHc" firstAttribute="leading" secondItem="ZUb-66-NGc" secondAttribute="leadingMargin" id="sdP-b4-RJi"/>
                         </constraints>
                     </view>
@@ -108,11 +80,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rhw-41-aqY" id="yX7-ce-nui">
-<<<<<<< HEAD
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
-=======
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-CT-Ylo">
@@ -162,57 +130,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-Cx-mFf">
-<<<<<<< HEAD
-                                <rect key="frame" x="167" y="107" width="139" height="21"/>
-=======
                                 <rect key="frame" x="107" y="107" width="213" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niv-EO-c0C">
-                                <rect key="frame" x="0.0" y="78" width="320" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paid: ON TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-EJ-eHt">
-                                <rect key="frame" x="0.0" y="480" width="320" height="21"/>
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niv-EO-c0C">
                                 <rect key="frame" x="20" y="78" width="300" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-6G-5LR" customClass="BarChartView" customModule="Charts">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="173" width="320" height="264"/>
-=======
-                                <rect key="frame" x="0.0" y="136" width="320" height="346"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+                                <rect key="frame" x="0.0" y="135" width="320" height="341"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-ji-12j">
-<<<<<<< HEAD
-                                <rect key="frame" x="80" y="107" width="87" height="21"/>
-=======
-                                <rect key="frame" x="20" y="107" width="147" height="21"/>
+                                <rect key="frame" x="20" y="106" width="87" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paid: ON TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-EJ-eHt">
-                                <rect key="frame" x="20" y="490" width="300" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
+                                <rect key="frame" x="20" y="484" width="300" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,14 +208,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="141" width="320" height="287"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-=======
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yem-UD-J48">
                                 <rect key="frame" x="20" y="475" width="280" height="29"/>
                                 <animations/>
@@ -291,16 +232,6 @@
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-bu-tBS" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="135" width="320" height="299"/>
-<<<<<<< HEAD
-=======
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-d3-8PP" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="287"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -340,11 +271,7 @@
             </objects>
             <point key="canvasLocation" x="1870" y="-854"/>
         </scene>
-<<<<<<< HEAD
         <!--Compare-->
-=======
-        <!--Compare View Controller-->
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
         <scene sceneID="UTN-iP-v6b">
             <objects>
                 <viewController id="piJ-oZ-kMl" customClass="CompareViewController" customModule="InCharge" customModuleProvider="target" sceneMemberID="viewController">
@@ -368,11 +295,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-F7-wCJ">
-<<<<<<< HEAD
                                 <rect key="frame" x="117" y="412" width="67" height="30"/>
-=======
-                                <rect key="frame" x="106" y="445" width="67" height="30"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                 <animations/>
                                 <state key="normal" title="Compare!"/>
                                 <connections>
@@ -380,25 +303,16 @@
                                     <segue destination="b9t-Pt-ORG" kind="show" id="jYV-gx-c3h"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-rX-n3P">
                                 <rect key="frame" x="30" y="154" width="260" height="260"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick what rooms you want to see" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohM-W5-E6F">
                                         <rect key="frame" x="1" y="8" width="259" height="21"/>
-=======
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-go-ect">
-                                <rect key="frame" x="18" y="151" width="283" height="266"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Who You Want to See" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-o4-dxR">
-                                        <rect key="frame" x="40" y="8" width="203" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dining Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-vl-qEJ" userLabel="Dining Room">
                                         <rect key="frame" x="8" y="104" width="98" height="21"/>
                                         <animations/>
@@ -415,52 +329,32 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-bD-eGs" userLabel="Lauren's Room">
                                         <rect key="frame" x="8" y="206" width="114" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRn-8b-2cK" userLabel="Mom">
-                                        <rect key="frame" x="96" y="65" width="39" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-R3-ljP" userLabel="John's Room">
                                         <rect key="frame" x="8" y="172" width="99" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuw-u0-3aP" userLabel="Dad">
-                                        <rect key="frame" x="104" y="113" width="31" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Living Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwD-ue-odd" userLabel="Living Room">
                                         <rect key="frame" x="8" y="70" width="94" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-2c-sf1" userLabel="John">
-                                        <rect key="frame" x="97" y="164" width="38" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kitchen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-f4-Ov5" userLabel="Kitchen">
                                         <rect key="frame" x="8" y="36" width="58" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-M2-c0H" userLabel="Lauren">
-                                        <rect key="frame" x="82" y="213" width="53" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-lj-poT">
                                         <rect key="frame" x="170" y="97" width="51" height="31"/>
                                         <animations/>
@@ -501,108 +395,49 @@
                                         <animations/>
                                         <connections>
                                             <action selector="lrSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="cid-fW-dGA"/>
-=======
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IW6-dd-Xmm">
-                                        <rect key="frame" x="210" y="65" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="selectMom:" destination="piJ-oZ-kMl" eventType="valueChanged" id="BUw-Mn-F7X"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odd-s3-7HB">
-                                        <rect key="frame" x="210" y="108" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="selectDad:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Uvf-Fj-CEd"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-AI-BXg">
-                                        <rect key="frame" x="210" y="159" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="johnSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="jMy-TS-Inl"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-da-oTn">
-                                        <rect key="frame" x="210" y="208" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="laurenSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="jPY-1f-zjY"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         </connections>
                                     </switch>
                                 </subviews>
                                 <animations/>
-<<<<<<< HEAD
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6IS-go-ect">
                                 <rect key="frame" x="18" y="151" width="283" height="266"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Who You Want to See" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-o4-dxR">
                                         <rect key="frame" x="-9" y="8" width="300" height="21"/>
-=======
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-rX-n3P">
-                                <rect key="frame" x="30" y="169" width="260" height="260"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick What Rooms you Want to see" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohM-W5-E6F">
-                                        <rect key="frame" x="0.0" y="13" width="262" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRn-8b-2cK" userLabel="Mom">
                                         <rect key="frame" x="45" y="65" width="90" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dining Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-vl-qEJ" userLabel="Dining Room">
-                                        <rect key="frame" x="8" y="94" width="98" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuw-u0-3aP" userLabel="Dad">
                                         <rect key="frame" x="45" y="99" width="90" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Master Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-X6-nXv" userLabel="Master Bedroom">
-                                        <rect key="frame" x="8" y="165" width="128" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-2c-sf1" userLabel="John">
                                         <rect key="frame" x="45" y="133" width="38" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-bD-eGs" userLabel="Lauren's Room">
-                                        <rect key="frame" x="8" y="228" width="114" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lauren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-M2-c0H" userLabel="Lauren">
                                         <rect key="frame" x="45" y="167" width="53" height="21"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John's Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-R3-ljP" userLabel="John's Room">
-                                        <rect key="frame" x="8" y="199" width="99" height="21"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IW6-dd-Xmm">
                                         <rect key="frame" x="194" y="60" width="51" height="31"/>
                                         <animations/>
@@ -629,83 +464,17 @@
                                         <animations/>
                                         <connections>
                                             <action selector="laurenSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="jPY-1f-zjY"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Living Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwD-ue-odd" userLabel="Living Room">
-                                        <rect key="frame" x="8" y="65" width="94" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kitchen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-f4-Ov5" userLabel="Kitchen">
-                                        <rect key="frame" x="6" y="36" width="58" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-lj-poT">
-                                        <rect key="frame" x="207" y="89" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="drSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="SvH-9Z-u48"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoH-J7-BPc">
-                                        <rect key="frame" x="207" y="31" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="kSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="7C9-5N-kFa"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Rn-ldy">
-                                        <rect key="frame" x="207" y="160" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="mbSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="qDg-RY-UMz"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guD-ZY-KSW">
-                                        <rect key="frame" x="207" y="194" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="jrSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Cef-7V-r2w"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6T8-Tw-Qcp">
-                                        <rect key="frame" x="207" y="223" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="larSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="Af2-u3-A8X"/>
-                                        </connections>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfY-WM-ohu">
-                                        <rect key="frame" x="211" y="60" width="51" height="31"/>
-                                        <animations/>
-                                        <connections>
-                                            <action selector="lrSelected:" destination="piJ-oZ-kMl" eventType="valueChanged" id="cid-fW-dGA"/>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                                         </connections>
                                     </switch>
                                 </subviews>
                                 <animations/>
-<<<<<<< HEAD
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-=======
-                            </scrollView>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-<<<<<<< HEAD
                     <navigationItem key="navigationItem" title="Compare" id="drj-Lk-2Gy"/>
-=======
-                    <navigationItem key="navigationItem" id="drj-Lk-2Gy">
-                        <nil key="title"/>
-                    </navigationItem>
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="compareButton" destination="EVb-F7-wCJ" id="UDw-Xv-FsE"/>
@@ -763,16 +532,13 @@
                                     <action selector="unitIndexChanged:" destination="rUv-g1-xmD" eventType="valueChanged" id="Ks7-Mo-Fjm"/>
                                 </connections>
                             </segmentedControl>
-<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OT5-PH-w8p">
                                 <rect key="frame" x="139" y="20" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-=======
->>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
