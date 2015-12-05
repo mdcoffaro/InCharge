@@ -114,8 +114,11 @@ class CompareGraphViewController: UIViewController {
         let allDataPoints: [String] = hours
         let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
         lineChart.data = lineChartData
+<<<<<<< HEAD
         let legend = lineChart.legend
         legend.wordWrapEnabled = true
+=======
+>>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
 
     }
     
@@ -155,8 +158,11 @@ class CompareGraphViewController: UIViewController {
         let allDataPoints: [String] = days
         let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
         lineChart.data = lineChartData
+<<<<<<< HEAD
         let legend = lineChart.legend
         legend.wordWrapEnabled = true
+=======
+>>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
     }
     
     func setChartMonths(dataPoints: [String], values: [Double], graphType: String, itemsToRender: [String]) {
@@ -195,8 +201,11 @@ class CompareGraphViewController: UIViewController {
         let allDataPoints: [String] = months
         let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
         lineChart.data = lineChartData
+<<<<<<< HEAD
         let legend = lineChart.legend
         legend.wordWrapEnabled = true
+=======
+>>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
 
     }
     
@@ -236,7 +245,10 @@ class CompareGraphViewController: UIViewController {
         let allDataPoints: [String] = years
         let lineChartData = LineChartData(xVals: allDataPoints, dataSets: allLineChartDataSets)
         lineChart.data = lineChartData
+<<<<<<< HEAD
         let legend = lineChart.legend
         legend.wordWrapEnabled = true
+=======
+>>>>>>> edd294b32e2d32774cb25b8d38fdcd8cc95b380a
     }
 }
