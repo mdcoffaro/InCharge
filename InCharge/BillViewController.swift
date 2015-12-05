@@ -19,8 +19,8 @@ class BillViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        utilitiesKeys = ["Gas", "Electricity", "Water", "Other"]
-        let utilitiesValues = [95.0, 87.0, 102.0, 60.0]
+        utilitiesKeys = ["Projected", "Current", "Gas", "Electricity", "Water"]
+        let utilitiesValues = [142.0, 122.0, 67.0, 45.0, 10.0]
         
         setChart(utilitiesKeys, values: utilitiesValues)
     }
@@ -40,7 +40,7 @@ class BillViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Gas, Electricity, Water, Other")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Projected, Current, Gas, Electricity, Water")
         let chartData = BarChartData(xVals: utilitiesKeys, dataSet: chartDataSet)
         
         barChartView.data = chartData
